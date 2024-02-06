@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .scrolling-touch {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: auto;
+  }
+  .scrolling-touch::-webkit-scrollbar {
+    display: none;
+  }
+
+  .scrolling-default {
+    -ms-overflow-style: auto;
+    scrollbar-width: auto;
+    overflow-x: inherit;
+  }
+  .scrolling-default::-webkit-scrollbar {
+    display: block;
+  }
+}
+
+.jersey {
+  width: 94px;
+  height: 94px;
+  position: relative;
+  display: flex;
+  transform: scale(50%);
+  justify-content: space-between;
+}
+
+.dorsal {
+  border: 4px solid black;
+  background-color: white;
+  width: 62px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.dorsal::after {
+  content: '';
+  width: 34px;
+  height: 16px;
+  margin-top: -6px;
+  border: 4px solid black;
+  background-color: white;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.manga {
+  width: 16px;
+  height: 40px;
+  border: 4px solid black;
+  background-color: white;
+}
+
+.trapezoid {
+  background: green;
+  height: 100px;
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  /* -webkit-transform: perspective(24px) rotateX(39deg) scale(0.6, 6.4); */
+  transform: perspective(24px) rotateX(10deg) scale(0.8, 0.6);
+}
+
+.area {
+  width: 60px;
+  height: 60px;
+  background-color: red;
+}

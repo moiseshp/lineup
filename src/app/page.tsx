@@ -8,13 +8,14 @@ export default function Home() {
         <div className="lg:border lg:w-[34rem] h-[22rem] lg:h-[34rem] lg:rounded-md bg-green-300">
           Board
         </div>
-        <div className="fixed lg:relative bottom-0 left-0 flex gap-2">
-          <Toolbar />
-        </div>
+        {/* <div className="w-full bg-white z-10 flex gap-2"> */}
+        <Toolbar />
+        {/* </div> */}
       </div>
       <div className="lg:block lg:w-80 lg:border lg:rounded-md p-6">
         <SettingsPanel />
       </div>
+      <div className="lg:hidden h-[4rem]" />
     </div>
   );
 }

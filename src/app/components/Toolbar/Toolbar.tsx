@@ -6,16 +6,60 @@ const Toolbar = () => {
   // const { show: showPersonalizeModal } = usePersonalizeModalStore();
 
   return (
-    <div className="btm-nav text-[0.65rem] lg:text-sm lg:absolute bottom-0">
-      <button className="lg:flex-row lg:gap-4">
-        {/* <PencilLineIcon /> */}X
-        <span className="btm-nav-label">Personalizar</span>
+    <>
+      <button className="btn">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
       </button>
-      <button className="lg:flex-row lg:gap-4">
-        {/* <PencilLineIcon /> */}X
-        <span className="btm-nav-label">Other Menu</span>
+
+      <button className="btn px-8">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
+        Save
       </button>
-    </div>
+
+      <button className="btn  btn-primary flex-1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          className="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"
+          />
+        </svg>
+        Download
+      </button>
+    </>
   );
 };
 

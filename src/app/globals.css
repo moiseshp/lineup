@@ -22,46 +22,6 @@
   }
 }
 
-.jersey {
-  width: 94px;
-  height: 94px;
-  position: relative;
-  display: flex;
-  transform: scale(50%);
-  justify-content: space-between;
-}
-
-.dorsal {
-  border: 4px solid black;
-  background-color: white;
-  width: 62px;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  border-bottom-left-radius: 12px;
-  border-bottom-right-radius: 12px;
-}
-
-.dorsal::after {
-  content: '';
-  width: 34px;
-  height: 16px;
-  margin-top: -6px;
-  border: 4px solid black;
-  background-color: white;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
-
-.manga {
-  width: 16px;
-  height: 40px;
-  border: 4px solid black;
-  background-color: white;
-}
-
 .trapezoid {
   background: green;
   height: 100px;

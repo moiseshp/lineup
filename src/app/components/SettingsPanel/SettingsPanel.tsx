@@ -1,5 +1,7 @@
 'use client';
 
+import Jersey from '../Jersey/Jersey';
+
 const SettingsPanel = () => {
   return (
     <div className="flex flex-col gap-4">
@@ -36,14 +38,14 @@ const SettingsPanel = () => {
         <div className="label font-bold">
           <span className="label-text">Jersey colors</span>
         </div>
-        <div className="flex justify-between">
+        <div className="flex gap-4">
           <div className="flex items-center gap-4">
-            <div className="pl-1 text-sm">First color</div>
-            <div className="w-8 h-8 rounded border border-gray-300 bg-white" />
+            <div className="pl-1 text-sm">Main</div>
+            <div className="w-8 h-8 rounded-full border border-gray-300 bg-white cursor-pointer" />
           </div>
           <div className="flex items-center gap-4">
-            <div className="pl-1 text-sm">Second color</div>
-            <div className="w-8 h-8 rounded border border-gray-300 bg-yellow-600" />
+            <div className="pl-1 text-sm">Secondary</div>
+            <div className="w-8 h-8 rounded-full border border-gray-300 bg-yellow-600 cursor-pointer" />
           </div>
         </div>
       </div>
@@ -53,14 +55,21 @@ const SettingsPanel = () => {
           <span className="label-text">Kit type</span>
         </div>
         <div className="flex justify-between gap-1">
-          {[1, 2, 3, 4, 5].map((option) => (
-            <button
-              key={option}
-              className="border flex items-center justify-center w-full h-12 border-gray-300 text-sm"
-            >
-              {option}
-            </button>
-          ))}
+          {['without-stripes', 'vertical', 'horizontal', 'box'].map(
+            (option) => (
+              <button
+                key={option}
+                className="border flex items-center justify-center w-full h-16 border-gray-300 text-sm rounded"
+              >
+                <Jersey
+                  hasStripes={option !== 'without-stripes'}
+                  stripeType={option}
+                  mainColor="#4432ba"
+                  secondaryColor="white"
+                />
+              </button>
+            ),
+          )}
         </div>
       </div>
 
@@ -68,25 +77,25 @@ const SettingsPanel = () => {
         <div className="label font-bold">
           <span className="label-text">Soccer Board</span>
         </div>
+        <div className="flex gap-6 mb-4">
+          <div className="flex items-center justify-between gap-4">
+            <div className="pl-1 text-sm">3D</div>
+            <input type="radio" name="design-board" className="radio" checked />
+          </div>
+          <div className="flex items-center gap-4">
+            <div className="pl-1 text-sm">Flat</div>
+            <input type="radio" name="design-board" className="radio" />
+          </div>
+        </div>
         <div className="flex justify-between gap-1">
           {[1, 2, 3, 4].map((option) => (
             <button
               key={option}
-              className="border flex items-center justify-center w-full h-12 border-gray-300 text-sm"
+              className="border flex items-center justify-center w-full h-16 border-gray-300 text-sm"
             >
               {option}
             </button>
           ))}
-        </div>
-        <div className="flex gap-6 mt-4">
-          <div className="flex items-center gap-4">
-            <div className="pl-1 text-sm">3D Board</div>
-            <input type="radio" name="design-board" className="radio" checked />
-          </div>
-          <div className="flex items-center gap-4">
-            <div className="pl-1 text-sm">Flat board</div>
-            <input type="radio" name="design-board" className="radio" />
-          </div>
         </div>
       </div>
     </div>

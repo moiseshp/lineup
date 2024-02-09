@@ -22,7 +22,7 @@ export default function RootLayout({
         <meta name="viewport" content="viewport-fit=cover" />
       </head>
       <body className={inter.className}>
-        <header>
+        <header className="sticky top-0">
           <Navbar />
         </header>
         <main>{children}</main>

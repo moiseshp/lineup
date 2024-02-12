@@ -1,6 +1,10 @@
 'use client';
 
-import Jersey from '../Jersey/Jersey';
+import { IndexType } from '@/utils/types';
+import * as AllJersey from '../Jersey';
+import { JERSEY_TYPES } from '../Jersey/SVGJersey';
+
+const Jersey: IndexType = AllJersey;
 
 const SettingsPanel = () => {
   return (
@@ -55,21 +59,22 @@ const SettingsPanel = () => {
           <span className="label-text">Kit type</span>
         </div>
         <div className="flex justify-between gap-1">
-          {['without-stripes', 'vertical', 'horizontal', 'box'].map(
-            (option) => (
+          {[
+            JERSEY_TYPES.FLAT,
+            JERSEY_TYPES.V_STRIPES,
+            JERSEY_TYPES.D_STRIPE,
+            JERSEY_TYPES.H_STRIPE,
+          ].map((option) => {
+            const JerseyStyle = Jersey[option];
+            return (
               <button
                 key={option}
                 className="border flex items-center justify-center w-full h-16 border-gray-300 text-sm rounded"
               >
-                <Jersey
-                  hasStripes={option !== 'without-stripes'}
-                  stripeType={option}
-                  mainColor="#4432ba"
-                  secondaryColor="white"
-                />
+                {<JerseyStyle />}
               </button>
-            ),
-          )}
+            );
+          })}
         </div>
       </div>
 

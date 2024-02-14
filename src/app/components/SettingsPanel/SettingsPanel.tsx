@@ -69,7 +69,7 @@ const SettingsPanel = () => {
             return (
               <button
                 key={option}
-                className="border flex items-center justify-center w-full h-16 border-gray-300 text-sm rounded"
+                className="border flex items-center justify-center w-full border-gray-300 text-sm rounded py-2"
               >
                 {<JerseyStyle />}
               </button>
